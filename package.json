@@ -1,0 +1,38 @@
+{
+  "name": "gulppr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarasangel/gulpPr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarasangel/gulpPr/issues"
+  },
+  "homepage": "https://github.com/tarasangel/gulpPr#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html": "^0.4.7",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-image": "^4.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "html": "^1.0.0",
+    "ws": "3.3.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "gulp": "^3.9.1"
+  }
+}

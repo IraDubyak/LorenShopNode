@@ -1,0 +1,140 @@
+<html lang="en" ng-app="app">
+<!doctype html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loren</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body ng-controller="mainCtrl">
+    <header id="header">
+        <div class="nav-menu">
+            <ul class="header_links_left">
+                <li><a class="logo" href="#/">Loren</a></li>
+                <li class="menu_item"><a class="pink" href="#!/">Home</a></li>
+                <li arrow-transform class="sub_menu_parent menu_item">
+                    <a href="#!/woman" class="arrow pink ">
+                        <span>Woman</span>
+                        <i class="fa fa-angle-down angle"></i>
+                    </a>
+                    <ul class="sub_menu">
+                        <div ng-repeat="item in sex_category_woman" data-id="{{item.id_category}}" class="header_id_category">
+                            <li><a href="#!/woman">{{item.name}}</a></li>
+                            <hr>
+                        </div>
+                    </ul>
+                </li>
+                <li arrow-transform class="sub_menu_parent menu_item">
+                    <a href="#!/man" class="arrow pink">
+                    <span>Man</span>
+                    <i class="fa fa-angle-down angle"></i>
+                </a>
+                    <ul class="sub_menu">
+                        <div ng-repeat="item in sex_category_man" data-id="{{item.id_category}}" class="header_id_category">
+                            <li><a href="#!/man">{{item.name}}</a></li>
+                            <hr>
+                        </div>
+                    </ul>
+                </li>
+                <li class="menu_item"><a class="pink" href="#!/contact_us">Contact us</a></li>
+            </ul>
+        <ul class="header_links_right">
+            <li class="menu_item"><a class="pink" href="#!/login">Login</a></li>
+            <li class="menu_item">
+                <a class="pink" href="#!/cart">Cart</a>
+                <span id="amount">0</span>
+            </li>
+            <li class="menu_item">
+                <a ng-click="startSearch()" id="search_button" class="pink" href="#"><i class="fa fa-search" style="font-size:24px"></i></a>
+
+            </li>
+        </ul>
+    </div>
+</header>
+<div ng-show="showSearchLine" id="search_block">
+    <div class="search_input">
+        <span clear-search-products id="search_products_button"><i class="fa fa-search" style="font-size:24px"></i></span>
+        <input type="text" placeholder="Search...">
+        <span clear-search-line id="search_close_button"><i class="fa fa-close" style="font-size:24px"></i></span>
+    </div>
+    <div class="search_product_container">
+        <a href="#!/single_product" class="search_product">
+            <img src="img/search_image.jpg">
+            <p>Brand</p>
+            <p>Name</p>
+            <p>$100</p>
+        </a>
+        <a href="#!/single_product" class="search_product">
+            <img src="img/search_image.jpg">
+            <p>Brand</p>
+            <p>Name</p>
+            <p>$100</p>
+        </a>
+        <a href="#!/single_product" class="search_product">
+            <img src="img/search_image.jpg">
+            <p>Brand</p>
+            <p>Name</p>
+            <p>$100</p>
+        </a>
+        <a href="#!/single_product" class="search_product">
+            <img src="img/search_image.jpg">
+            <p>Brand</p>
+            <p>Name</p>
+            <p>$100</p>
+        </a>
+    </div>
+</div>
+
+<div class="ng-view"></div>
+
+<div id="footer">
+    <div class="logo1">
+        <h3 class="logo">Loren</h3>
+        <p>Sed ornare cras donec litora integer curabit ur orci at nullam aliquam libero nam himen aeos amet massa amet.
+            <br><br><br></p>
+    </div>
+    <div class="about">
+        <h2>About the shop</h2>
+        <p>We are dedicated to produce beautiful and eco-friendly clothes.</p>
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://ru.pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play"></i></a>
+        </div>
+    </div>
+    <div class="menu">
+        <h2>Footer menu</h2>
+        <ul>
+            <li><a href="#!/woman">Woman</a></li>
+            <li><a href="#!/man">Man</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#!/contact_us">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="contact">
+        <h2>Contact</h2>
+        <p>Call Us at (333) 123 456 </p>
+        <p>
+            <a href="https://accounts.google.com/signin/v2/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=ru&flowName=GlifWebSignIn&flowEntry=ServiceLogin#__utma=29003808.490608540.1526988468.1526988468.1526988468.1&__utmb=29003808.0.10.1526988468&__utmc=29003808&__utmx=-&__utmz=29003808.1526988468.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)&__utmv=-&__utmk=89014744" target="_blank">john@doe.com</a></p>
+        <div class="payment">
+            <a href="https://www.visa.com.ua/uk_UA" target="_blank"><i class="fa fa-cc-visa"></i></a>
+            <a href="https://www.mastercard.ua/uk-ua.html" target="_blank"><i class="fa fa-cc-mastercard"></i></a>
+            <a href="https://www.americanexpress.com/" target="_blank"><i class="fa fa-cc-amex"></i></a>
+            <a href="https://www.paypal.com/ru/home" target="_blank"><i class="fa fa-cc-paypal"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<script src="../js/all.js"></script>
+    <!--   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv2NcqCMd3nKtKjBD60o9cNJNaTPQceNc&callback=initMap"></script>-->
+</body>
+
+</html>

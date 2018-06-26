@@ -1,0 +1,1 @@
+app.controller('customerCtrl', function ($scope, cartService) {})

@@ -1,0 +1,1 @@
+app.controller('paymentCtrl', function ($scope, cartService) {})

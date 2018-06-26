@@ -1,0 +1,43 @@
+<div class="cart">
+    <h1>Cart</h1>
+    <div class="cart_container">
+        <div class="cart_title">
+            <h3 class="product">Product</h3>
+            <h3 class="price">Price</h3>
+            <h3 class="cart_quantity_block">Quantity</h3>
+            <h3 class="subtotal">Subtotal</h3>
+            <p> </p>
+        </div>
+        <div class="cart_item" ng-repeat="order_item in order_items_in_cart">
+            <div class="product">
+                <a href="#!/single_product">
+                    <img id="imageproduct_cart" ng-src="/img/{{order_item.image}}" alt="">
+                </a>
+                <div class="product_description">
+                    <h3 id="brand_cart">{{order_item.brand}}</h3>
+                    <a href="#!/single_product">
+                        <h2 id="productname_cart">{{order_item.name}}</h2>
+                    </a>
+                    <span>Size: </span>
+                    <span id="size_cart">{{order_item.size}}</span>
+                </div>
+            </div>
+            <div class="price">
+                <h2 id="price">€ {{order_item.price}}</h2>
+            </div>
+            <div class="cart_quantity_block">
+                <button class="decrease_product" ng-click="decreaseProduct()"><i class="fa fa-minus"></i></button>
+                <span id="cart_current_quantity">{{order_item.quantity}}</span>
+                <button class="increase_product" ng-click="increaseProduct()"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="subtotal">
+                <h2 id="subtotal">€ {{order_item.quantity * order_item.price}}</h2>
+            </div>
+            <div id="cart_close_button"><i class="fa fa-close" style="font-size:24px"></i></div>
+        </div>
+    </div>
+    <div class="go_to_checkout">
+        <span class="total_price">€ {{getTotal()}}</span>
+        <a href="#!/customer_information"><button class="pink_button" ng-click="checkout()">checkout</button></a>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+environment/LorenShop/vendor/
+environment/.vagrant/
+environment/ubuntu-bionic-18.04-cloudimg-console.log
+build/
+

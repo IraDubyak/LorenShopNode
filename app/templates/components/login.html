@@ -1,0 +1,21 @@
+<div class="login" ng-controller="loginCtrl">
+    <h1>LOGIN</h1>
+    <div class="box-content">
+        <form id="customer_login">
+            <p class="form_instructions">Please enter your e-mail and password:</p>
+            <div class="form_control">
+                <input ng-model="credentials.email" type="e-mail" class="form_input" required="required" placeholder="Email">
+            </div>
+            <div class="form_control">
+                <input ng-model="credentials.password" type="password" class="form_input" required="required" placeholder="Password">
+            </div>
+            <div class="box_button_wrapper">
+                <a href="#!/"><button type="submit" ng-click="login()">Login</button></a>
+            </div>
+            <p class="register_link">
+                Don't have an account?
+                <a href="#!/registration">Register</a>
+            </p>
+        </form>
+    </div>
+</div>

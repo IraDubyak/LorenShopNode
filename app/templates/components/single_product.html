@@ -1,0 +1,44 @@
+<div ng-controller="ApplicationController">
+    <div ng-controller="singleCtrl as ctrl" class="single_product">
+    <img ng-src="/img/{{single_product.image}}" alt="">
+    <div class="description">
+        <h3>{{single_product.brand}}</h3>
+        <h1>{{single_product.name}}</h1>
+        <h2>€{{single_product.price}}</h2>
+        <h3>Size</h3>
+        <ul class="size_block">
+            <li class="product_size">{{size.xs}}</li>
+            <li class="product_size">{{size.s}}</li>
+            <li class="product_size">{{size.m}}</li>
+            <li class="product_size">{{size.l}}</li>
+            <li class="product_size">{{size.xl}}</li>
+        </ul>
+        <h3>Quantity</h3>
+        <div class="quantity_block">
+            <button ng-click="decreaseProduct()" class="decrease_product"><i class="fa fa-minus"></i></button>
+            <span id="current_quantity">{{current_quantity}}</span>
+            <button ng-click="increaseProduct()" class="increase_product"><i class="fa fa-plus"></i></button>
+        </div>
+        <a href="#!/cart"><button class="pink_button" ng-click="ctrl.saveCartItem()">Add to cart</button></a>
+        <p>{{single_product.description}}</p>
+    </div>
+</div>
+<div class="product_features">
+    <div class="product_features_item">
+        <div><i class="fa fa-heart" style="font-size:36px;"></i></div>
+        <h3>HIGH QUALITY FIBER</h3>
+        <p>All our products are made from high quality fiber, for a maximum confort.</p>
+    </div>
+    <div class="product_features_item">
+        <div><i class="fa fa-pagelines" style="font-size:36px"></i>
+        </div>
+        <h3>HIGH QUALITY FIBER</h3>
+        <p>All our products are made from high quality fiber, for a maximum confort.</p>
+    </div>
+    <div class="product_features_item">
+        <div><i class="fa fa-paw" style="font-size:36px;"></i></div>
+        <h3>HIGH QUALITY FIBER</h3>
+        <p>All our products are made from high quality fiber, for a maximum confort.</p>
+    </div>
+</div>
+</div>

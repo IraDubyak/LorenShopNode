@@ -1,4 +1,5 @@
-app.controller('manCtrl', function ($scope, $http) {
+app.controller('manCtrl', function ($scope, $http, $window) {
+    $window.scrollTo(0, angular.element(document.getElementsByTagName('body')).offsetTop);
     $http.get(nodeVariable + 'man_products')
         .then(function(response) {
             $scope.product_man = response.data;

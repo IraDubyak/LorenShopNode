@@ -1,5 +1,5 @@
-app.controller('homeCtrl', function ($scope) {
-
+app.controller('homeCtrl', function ($scope, $window) {
+    $window.scrollTo(0, angular.element(document.getElementsByTagName('body')).offsetTop);
     $(document).ready(function () {
         $('.header_slider').slick({
             dots: true,

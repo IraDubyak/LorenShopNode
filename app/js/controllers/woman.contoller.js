@@ -1,4 +1,5 @@
-app.controller('womanCtrl', function ($scope, $http) {
+app.controller('womanCtrl', function ($scope, $http, $window) {
+    $window.scrollTo(0, angular.element(document.getElementsByTagName('body')).offsetTop);
     $http.get(nodeVariable + 'woman_products')
 
     .then(function(response) {

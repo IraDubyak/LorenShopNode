@@ -1,4 +1,5 @@
-app.controller('loginCtrl', function ($scope, $rootScope, AUTH_EVENTS, AuthService) {
+app.controller('loginCtrl', function ($scope, $rootScope, AUTH_EVENTS, AuthService, $window) {
+    $window.scrollTo(0, angular.element(document.getElementsByTagName('body')).offsetTop);
   $scope.credentials = {
     email: '',
     password: ''

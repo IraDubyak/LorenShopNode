@@ -1,1 +1,1 @@
-app.controller('customerCtrl', function ($scope, cartService) {})
+app.controller('customerCtrl', function () {})

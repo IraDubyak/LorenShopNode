@@ -19,5 +19,16 @@
             return arrayFromObject(groups);
         }
 
+$('.up_button').hide();
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 100) {
+      $('.up_button').fadeIn();
+    } else {
+      $('.up_button').fadeOut();
+    }
+  });
 
+  $('.up_button').click(function() {
+    $('body, html').animate({scrollTop: 0}, 800);
+  });
 

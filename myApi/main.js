@@ -67,8 +67,15 @@ serverDomain.run(function() {
     var productCategoriesRouter = require('./routes/product_categories');
     app.use('/product_categories', productCategoriesRouter);
 
-    var productRouter = require('./routes/products');
-    app.use('/products', productRouter);
+    var productsRouter = require('./routes/products');
+    app.use('/products', productsRouter);
+
+
+
+
+
+    var productRouter = require('./routes/product');
+    app.use('/product', productRouter);
 
      var orderItemRouter = require('./routes/order_items');
     app.use('/order_items', orderItemRouter);

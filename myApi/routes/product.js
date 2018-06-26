@@ -10,17 +10,15 @@ var execQuery = function (query, res) {
             res.send(err);
         }
         else {
-            res.send(ress[0]);
+            res.send(ress);
         }
     });
 }
 
+productRouter.get("/", function(req , res){
 
-productRouter.get("/:id", function(req , res){
-
-    var query = 'SELECT * FROM  products WHERE id_product=' + req.params.id;
+    var query = 'SELECT products.id_product, products.name, products.image, products.brand, products.price, products.color, products.description, products.id_category, productdetails.size, categories.id_sex_category FROM products INNER JOIN categories ON categories.id_category = products.id_category INNER JOIN productdetails ON products.id_product=productdetails.id_product';
     execQuery(query, res);
 });
 
 module.exports = productRouter;
-

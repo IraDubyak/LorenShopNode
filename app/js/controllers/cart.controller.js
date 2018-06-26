@@ -1,4 +1,5 @@
-app.controller('cartCtrl', function ($scope, $http, cartService) {
+app.controller('cartCtrl', function ($scope, $http, cartService, $window) {
+    $window.scrollTo(0, angular.element(document.getElementsByTagName('body')).offsetTop);
     $scope.current_quantity = cartService.current_quantity;
     $scope.decreaseProduct = cartService.decreaseProduct;
     $scope.increaseProduct = cartService.increaseProduct;

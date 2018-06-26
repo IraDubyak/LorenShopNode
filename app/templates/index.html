@@ -46,48 +46,29 @@
             <li class="menu_item"><a class="pink" href="#!/login">Login</a></li>
             <li class="menu_item">
                 <a class="pink" href="#!/cart">Cart</a>
-                <span id="amount">0</span>
             </li>
             <li class="menu_item">
-                <a ng-click="startSearch()" id="search_button" class="pink" href="#"><i class="fa fa-search" style="font-size:24px"></i></a>
+                <a ng-click="startSearch()" id="search_button" class="pink"><i class="fa fa-search" style="font-size:24px"></i></a>
 
             </li>
         </ul>
     </div>
 </header>
-<div ng-show="showSearchLine" id="search_block">
-    <div class="search_input">
-        <span clear-search-products id="search_products_button"><i class="fa fa-search" style="font-size:24px"></i></span>
-        <input type="text" placeholder="Search...">
-        <span clear-search-line id="search_close_button"><i class="fa fa-close" style="font-size:24px"></i></span>
+    <div ng-show="showSearchLine" id="search_block">
+        <div class="search_input">
+            <span clear-search-products id="search_products_button"><i class="fa fa-search" style="font-size:24px"></i></span>
+            <input type="text" placeholder="Search..." ng-model="search">
+            <span clear-search-line id="search_close_button"><i class="fa fa-close" style="font-size:24px"></i></span>
+        </div>
+        <div class="search_product_container">
+            <a href="#!/single_product" class="search_product" ng-repeat="item in product | filter:search">
+                <img src="img/{{item.image}}">
+                <p>{{item.brand}}</p>
+                <p>{{item.name}}</p>
+                <p>${{item.price}}</p>
+            </a>
+        </div>
     </div>
-    <div class="search_product_container">
-        <a href="#!/single_product" class="search_product">
-            <img src="img/search_image.jpg">
-            <p>Brand</p>
-            <p>Name</p>
-            <p>$100</p>
-        </a>
-        <a href="#!/single_product" class="search_product">
-            <img src="img/search_image.jpg">
-            <p>Brand</p>
-            <p>Name</p>
-            <p>$100</p>
-        </a>
-        <a href="#!/single_product" class="search_product">
-            <img src="img/search_image.jpg">
-            <p>Brand</p>
-            <p>Name</p>
-            <p>$100</p>
-        </a>
-        <a href="#!/single_product" class="search_product">
-            <img src="img/search_image.jpg">
-            <p>Brand</p>
-            <p>Name</p>
-            <p>$100</p>
-        </a>
-    </div>
-</div>
 
 <div class="ng-view"></div>
 

@@ -1,4 +1,5 @@
-app.controller('singleCtrl', function ($scope, $http, $routeParams, cartService, AuthService) {
+app.controller('singleCtrl', function ($scope, $http, $window, $routeParams, cartService, AuthService) {
+    $window.scrollTo(0, angular.element(document.getElementsByTagName('body')).offsetTop);
     var id = $routeParams.id;
     var that = this;
     $scope.current_quantity = cartService.current_quantity;

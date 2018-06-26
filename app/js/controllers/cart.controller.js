@@ -8,7 +8,7 @@ app.controller('cartCtrl', function ($scope, $http, cartService) {
         .then(function(response) {
                 $scope.order_items_in_cart = response.data;
         });
-    }, 1000);
+    }, 100);
 
     $scope.getTotal = function(){
     var total = 0;

@@ -482,26 +482,27 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 469px;
     width: 100%;
     color: #75737e;
 }
 
 .contact_us_block .right_block {
-    background-color: white;
-    padding: 25px;
-    margin-right: 35px;
-    width: 50%;
+    margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
 }
-
+.right_block .info{
+    flex-basis: 50%;
+    padding: 28px;
+}
 .contact_us_block .right_block .info p:first-of-type {
     margin-bottom: 25px;
 }
 
 .contact_info {
     background: rgba(225, 22, 135, 0.13);
-    margin-top: 25px;
-    padding: 24px 35px;
+    padding: 25px 35px;
+    flex-basis: 50%;
 }
 
 .contact_info h2 {
@@ -532,15 +533,6 @@ header {
     text-transform: uppercase;
     line-height: 1.5;
     text-align: right;
-}
-
-.map_wrapper {
-    margin-left: 35px;
-    width: 50%;
-}
-
-#map {
-    height: 100%;
 }
 
 .gm-style-cc a,
@@ -2116,6 +2108,7 @@ i.fa-plus {
 
 .cart {
     margin: 123px 35px 50px 35px;
+    min-height: 50%;
 }
 
 .cart_title,
@@ -2233,4 +2226,28 @@ i.fa-plus {
     color: #e11687;
     cursor: pointer;
     display: none;
+}
+
+.up_button {
+     background-color:#e11687;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 99;
+}
+.up_button:hover {
+    background-color: #9b0f5d;
+}
+
+.fa-angle-up {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 12px;
+    top: 6px;
 }

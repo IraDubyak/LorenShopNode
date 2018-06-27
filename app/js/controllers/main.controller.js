@@ -25,6 +25,10 @@ app.controller('mainCtrl', function ($scope, $http, $window) {
         $scope.showSearchLine = !$scope.showSearchLine;
     }
 
+    $scope.closeSearch = function () {
+        $scope.showSearchLine = false;
+    }
+
      $http.get(nodeVariable + 'woman')
         .then(function(response) {
             $scope.sex_category_woman = response.data;

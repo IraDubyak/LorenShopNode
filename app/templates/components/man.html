@@ -1,6 +1,126 @@
 <div class="filter_container_wrapper">
     <div class="filters_container_man">
-        <div class="category_container">
+
+        <div id="menuToggle">
+            <input type="checkbox" />
+
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+
+            <ul id="menu">
+                <div class="category_container">
+                    <p>Categories</p>
+                    <ul>
+                        <li dropdown class="dropdown-btn">
+                            <a href="#!/woman">Woman</a>
+                            <a class="fa fa-plus"></a>
+                        </li>
+                        <div class="dropdown-container">
+                            <ul>
+                                <li circle ng-repeat="item in sex_category_woman" data-id="{{item.id_category}}" class="id_category"><a href="#!/woman">{{item.name}}</a></li>
+                            </ul>
+                        </div>
+                        <li dropdown class="dropdown-btn">
+                            <a href="#!/man">Man</a>
+                            <a class="fa fa-plus"></a>
+                        </li>
+                        <div class="dropdown-container">
+                            <ul>
+                                <li circle ng-repeat="item in sex_category_man" data-id="{{item.id_category}}" class="id_category"><a href="#!/man">{{item.name}}</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <div class="shop_container">
+                    <p>Shop by</p>
+                    <ul>
+                        <li>Color &nbsp;<span class="stop_filter" ng-click="color('')" id="color">&#10006;</span></li>
+                        <div class="category_color">
+                            <div check class="color_box1 color_contaiter" ng-click="color('red')"></div>
+                            <div check class="color_box2 color_contaiter" ng-click="color('cream')"></div>
+                            <div check class="color_box3 color_contaiter" ng-click="color('black')"></div>
+                            <div check class="color_box4 color_contaiter" ng-click="color('blue')"></div>
+                            <div check class="color_box5 color_contaiter" ng-click="color('gray')"></div>
+                            <div check class="color_box6 color_contaiter" ng-click="color('green')"></div>
+                            <div check class="color_box7 color_contaiter" ng-click="color('pink')"></div>
+                            <div check class="color_box8 color_contaiter" ng-click="color('brown')"></div>
+                        </div>
+
+
+                        <li>Size &nbsp;<span class="stop_filter" id="size" ng-click="man_products_no_size()">&#10006;</span></li>
+                        <div class="category_size">
+                            <div class="size_box" ng-click="man_products_size_xs()">XS</div>
+                            <div class="size_box" ng-click="man_products_size_s()">S</div>
+                            <div class="size_box" ng-click="man_products_size_m()">M</div>
+                            <div class="size_box" ng-click="man_products_size_l()">L</div>
+                            <div class="size_box" ng-click="man_products_size_xl()">XL</div>
+                        </div>
+
+
+                        <li>Price &nbsp;<span class="stop_filter" id="price" ng-click="price('', '')">&#10006;</span></li>
+                        <label class="container" ng-click="price(100, 200)">$100 - $200
+                            <input type="radio" name="r_size" class="radio_price">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container" ng-click="price(200, 300)">$200 - $300
+                            <input type="radio" name="r_size" class="radio_price">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container" ng-click="price(300, 400)">$300 - $400
+                            <input type="radio" name="r_size" class="radio_price">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container" ng-click="price(400, 1000)">About $400
+                            <input type="radio" name="r_size" class="radio_price">
+                            <span class="checkmark"></span>
+                        </label>
+
+
+                        <li>Brand &nbsp;<span class="stop_filter" ng-click="brand('')" id="brand">&#10006;</span></li>
+                        <label class="container" ng-click="brand('Louis Vuitton')">Louis Vuitton
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+
+                        <label class="container" ng-click="brand('Gucci')">Gucci
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+
+                        <label class="container" ng-click="brand('Lazada')">Lazada
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+
+                        <label class="container" ng-click="brand('Mango')">Mango
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+                        <label class="container" ng-click="brand('Blaze')">Blaze
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+
+                        <label class="container" ng-click="brand('Assos')">Assos
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+
+                        <label class="container" ng-click="brand('Channel')">Channel
+                            <input type="radio" name="r_brand" class="radio_brand">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </ul>
+                </div>
+
+            </ul>
+        </div>
+
+        <div class="category_container none768">
             <p>Categories</p>
             <ul>
                 <li dropdown class="dropdown-btn">
@@ -23,7 +143,7 @@
                 </div>
             </ul>
         </div>
-        <div class="shop_container">
+        <div class="shop_container none768">
             <p>Shop by</p>
             <ul>
                 <li>Color &nbsp;<span class="stop_filter" ng-click="color('')" id="color">&#10006;</span></li>

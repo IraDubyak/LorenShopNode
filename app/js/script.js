@@ -19,6 +19,15 @@
             return arrayFromObject(groups);
         }
 
+function makeResponsiveHeader() {
+    var header = document.getElementById("header");
+    if (header.className === "nav") {
+        header.className += " responsive";
+    } else {
+        header.className = "nav";
+    }
+}
+
 $('.up_button').hide();
   $(window).scroll(function() {
     if($(this).scrollTop() > 100) {

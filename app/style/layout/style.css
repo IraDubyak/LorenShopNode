@@ -179,11 +179,12 @@ header {
     padding: 0 15px;
 }
 
-.header_links_left li:first-of-type,
-.header_links_right li:nth-of-type(2) {
+.header_links_left li:first-of-type {
     margin-right: 55px;
 }
-
+.header_links_right li:nth-of-type(2) {
+    margin-right: 5px;
+}
 .header_links_left li:not(first-of-type),
 .header_links_right li {
     line-height: 47px;
@@ -2250,4 +2251,45 @@ i.fa-plus {
     position: absolute;
     right: 12px;
     top: 6px;
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header_links_left li:not(:first-child),
+   .header_links_right li:not(:last-child) {
+        display: none;
+    }
+    .burger {
+        justify-content: flex-end;
+        display: flex;
+        margin-top: 10px;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+        position: fixed;
+    }
+  .nav.responsive .burger {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+  .nav.responsive .nav-menu,
+  .nav.responsive .header_links_left,
+  .nav.responsive .header_links_right {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav.responsive .header_links_left li,
+  .nav.responsive .header_links_right li:not(:nth-child(3)) {
+    display: flex;
+  }
+  .header_links_left  {
+    pointer-events: none;
+}
 }

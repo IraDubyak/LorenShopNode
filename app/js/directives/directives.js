@@ -15,6 +15,28 @@ app.directive('dropdown', function () {
     };
 })
 
+// app.directive('showSearchline', function () {
+//     return {
+//         restrict: 'A',
+//         link: function ($scope, element, attrs) {
+//             element.on('click', function () {
+//                 $('#search_block').show();
+//             });
+//         }
+//     };
+// })
+
+app.directive('hideSearchline', function () {
+    return {
+        restrict: 'A',
+        link: function ($scope, element, attrs) {
+            element.on('click', function () {
+                $('#search_block').hide();
+            });
+        }
+    };
+})
+
 app.directive('pinkHover', function () {
     return {
         restrict: 'A',

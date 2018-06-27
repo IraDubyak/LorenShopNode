@@ -11,7 +11,7 @@
     <div class="up_button"> 
          <i class="fa fa-angle-up" aria-hidden="true"></i>
       </div>
-    <header id="header">
+    <header id="header" class="nav">
         <div class="nav-menu">
             <ul class="header_links_left">
                 <li><a class="logo" href="#/">Loren</a></li>
@@ -51,6 +51,11 @@
                 <a ng-click="startSearch()" id="search_button" class="pink"><i class="fa fa-search" style="font-size:24px"></i></a>
 
             </li>
+            <li>
+                <a href="javascript:void(0);" class="burger" onclick="makeResponsiveHeader()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
         </ul>
     </div>
 </header>
@@ -61,7 +66,7 @@
             <span clear-search-line id="search_close_button"><i class="fa fa-close" style="font-size:24px"></i></span>
         </div>
         <div class="search_product_container">
-            <a href="#!/single_product" class="search_product" ng-repeat="item in product | filter:search">
+            <a ng-click="closeSearch()" href="#!/single_product/{{item.id_product}}" class="search_product" data-id="{{item.id_product}}" ng-repeat="item in product | filter:search">
                 <img src="img/{{item.image}}">
                 <p>{{item.brand}}</p>
                 <p>{{item.name}}</p>
